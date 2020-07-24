@@ -1,0 +1,661 @@
+{
+  "settings": {
+    "languages": [
+      "pt"
+    ],
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp"
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "pt"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "pt": {
+        "settings": {
+          "locale": "pt",
+          "tag": "domain-manager-pt",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "trainByDomain": false,
+          "useStemDict": true
+        },
+        "stemDict": {
+          "fal,marcal,me,o,sobr": {
+            "intent": "greetings.gerente",
+            "domain": "default"
+          },
+          "a,fal,me,samanth,sobr": {
+            "intent": "greetings.gerente1",
+            "domain": "default"
+          },
+          "fal,me,o,ricard,sobr": {
+            "intent": "greetings.gerente2",
+            "domain": "default"
+          },
+          "fal,me,o,raphael,sobr": {
+            "intent": "greetings.programador",
+            "domain": "default"
+          },
+          "fal,me,o,sobr,vinicius": {
+            "intent": "greetings.programador2",
+            "domain": "default"
+          },
+          "chapolin,fal,me,o,sobr": {
+            "intent": "greetings.Chapolin",
+            "domain": "default"
+          },
+          "bolsonar,fal,me,o,sobr": {
+            "intent": "greetings.Bolsonaro",
+            "domain": "default"
+          },
+          "ir,precis": {
+            "intent": "greetings.adeus",
+            "domain": "default"
+          },
+          "ate,mais": {
+            "intent": "greetings.adeus",
+            "domain": "default"
+          },
+          "obrig": {
+            "intent": "greetings.adeus",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "greetings.gerente": "default",
+          "greetings.gerente1": "default",
+          "greetings.gerente2": "default",
+          "greetings.programador": "default",
+          "greetings.programador2": "default",
+          "greetings.Chapolin": "default",
+          "greetings.Bolsonaro": "default",
+          "greetings.adeus": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "Me fale sobre o Marcal.",
+            "intent": "greetings.gerente"
+          },
+          {
+            "domain": "default",
+            "utterance": "Me fale sobre a Samantha",
+            "intent": "greetings.gerente1"
+          },
+          {
+            "domain": "default",
+            "utterance": "Me fale sobre o Ricardo",
+            "intent": "greetings.gerente2"
+          },
+          {
+            "domain": "default",
+            "utterance": "Me fale sobre o Raphael",
+            "intent": "greetings.programador"
+          },
+          {
+            "domain": "default",
+            "utterance": "Me fale sobre o Vinicius",
+            "intent": "greetings.programador2"
+          },
+          {
+            "domain": "default",
+            "utterance": "Me fale sobre o Chapolin",
+            "intent": "greetings.Chapolin"
+          },
+          {
+            "domain": "default",
+            "utterance": "Me fale sobre o Bolsonaro",
+            "intent": "greetings.Bolsonaro"
+          },
+          {
+            "domain": "default",
+            "utterance": "Preciso ir",
+            "intent": "greetings.adeus"
+          },
+          {
+            "domain": "default",
+            "utterance": "Até mais",
+            "intent": "greetings.adeus"
+          },
+          {
+            "domain": "default",
+            "utterance": "Obrigado",
+            "intent": "greetings.adeus"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "pt",
+              "tag": "nlu-pt",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "me": 1,
+              "fal": 1,
+              "sobr": 1,
+              "o": 1,
+              "marcal": 1,
+              "a": 1,
+              "samanth": 1,
+              "ricard": 1,
+              "raphael": 1,
+              "vinicius": 1,
+              "chapolin": 1,
+              "bolsonar": 1,
+              "precis": 1,
+              "ir": 1,
+              "ate": 1,
+              "mais": 1,
+              "obrig": 1
+            },
+            "intents": {
+              "greetings.gerente": 1,
+              "greetings.gerente1": 1,
+              "greetings.gerente2": 1,
+              "greetings.programador": 1,
+              "greetings.programador2": 1,
+              "greetings.Chapolin": 1,
+              "greetings.Bolsonaro": 1,
+              "greetings.adeus": 1
+            },
+            "intentFeatures": {
+              "greetings.gerente": [
+                "me",
+                "fal",
+                "sobr",
+                "o",
+                "marcal"
+              ],
+              "greetings.gerente1": [
+                "me",
+                "fal",
+                "sobr",
+                "a",
+                "samanth"
+              ],
+              "greetings.gerente2": [
+                "me",
+                "fal",
+                "sobr",
+                "o",
+                "ricard"
+              ],
+              "greetings.programador": [
+                "me",
+                "fal",
+                "sobr",
+                "o",
+                "raphael"
+              ],
+              "greetings.programador2": [
+                "me",
+                "fal",
+                "sobr",
+                "o",
+                "vinicius"
+              ],
+              "greetings.Chapolin": [
+                "me",
+                "fal",
+                "sobr",
+                "o",
+                "chapolin"
+              ],
+              "greetings.Bolsonaro": [
+                "me",
+                "fal",
+                "sobr",
+                "o",
+                "bolsonar"
+              ],
+              "greetings.adeus": [
+                "precis",
+                "ir",
+                "ate",
+                "mais",
+                "obrig"
+              ]
+            },
+            "featuresToIntent": {
+              "me": [
+                "greetings.gerente",
+                "greetings.gerente1",
+                "greetings.gerente2",
+                "greetings.programador",
+                "greetings.programador2",
+                "greetings.Chapolin",
+                "greetings.Bolsonaro"
+              ],
+              "fal": [
+                "greetings.gerente",
+                "greetings.gerente1",
+                "greetings.gerente2",
+                "greetings.programador",
+                "greetings.programador2",
+                "greetings.Chapolin",
+                "greetings.Bolsonaro"
+              ],
+              "sobr": [
+                "greetings.gerente",
+                "greetings.gerente1",
+                "greetings.gerente2",
+                "greetings.programador",
+                "greetings.programador2",
+                "greetings.Chapolin",
+                "greetings.Bolsonaro"
+              ],
+              "o": [
+                "greetings.gerente",
+                "greetings.gerente2",
+                "greetings.programador",
+                "greetings.programador2",
+                "greetings.Chapolin",
+                "greetings.Bolsonaro"
+              ],
+              "marcal": [
+                "greetings.gerente"
+              ],
+              "a": [
+                "greetings.gerente1"
+              ],
+              "samanth": [
+                "greetings.gerente1"
+              ],
+              "ricard": [
+                "greetings.gerente2"
+              ],
+              "raphael": [
+                "greetings.programador"
+              ],
+              "vinicius": [
+                "greetings.programador2"
+              ],
+              "chapolin": [
+                "greetings.Chapolin"
+              ],
+              "bolsonar": [
+                "greetings.Bolsonaro"
+              ],
+              "precis": [
+                "greetings.adeus"
+              ],
+              "ir": [
+                "greetings.adeus"
+              ],
+              "ate": [
+                "greetings.adeus"
+              ],
+              "mais": [
+                "greetings.adeus"
+              ],
+              "obrig": [
+                "greetings.adeus"
+              ]
+            },
+            "neuralNetwork": {
+              "features": [
+                "me",
+                "fal",
+                "sobr",
+                "o",
+                "marcal",
+                "a",
+                "samanth",
+                "ricard",
+                "raphael",
+                "vinicius",
+                "chapolin",
+                "bolsonar",
+                "precis",
+                "ir",
+                "ate",
+                "mais",
+                "obrig",
+                "nonefeature"
+              ],
+              "intents": [
+                "greetings.gerente",
+                "greetings.gerente1",
+                "greetings.gerente2",
+                "greetings.programador",
+                "greetings.programador2",
+                "greetings.Chapolin",
+                "greetings.Bolsonaro",
+                "greetings.adeus",
+                "None"
+              ],
+              "perceptrons": [
+                [
+                  0.302137166261673,
+                  0.302137166261673,
+                  0.302137166261673,
+                  0.9038721919059753,
+                  10.467560768127441,
+                  -0.6017348170280457,
+                  -0.6017348170280457,
+                  -1.8983429670333862,
+                  -1.9905654191970825,
+                  -1.9532066583633423,
+                  -1.9011002779006958,
+                  -1.8204728364944458,
+                  -0.03188064321875572,
+                  -0.03188064321875572,
+                  -0.031787168234586716,
+                  -0.031787168234586716,
+                  -0.05629541724920273,
+                  -0.05511534959077835,
+                  0.06277683112915632
+                ],
+                [
+                  1.1379362344741821,
+                  1.1379362344741821,
+                  1.1379362344741821,
+                  -3.294266700744629,
+                  -0.33868715167045593,
+                  4.432202339172363,
+                  4.432202339172363,
+                  -0.6089288592338562,
+                  -0.7219288945198059,
+                  -0.663779616355896,
+                  -0.530849814414978,
+                  -0.430091917514801,
+                  -0.12978877127170563,
+                  -0.12978877127170563,
+                  -0.12798543274402618,
+                  -0.12798543274402618,
+                  -0.22011935710906982,
+                  -0.21890036761760712,
+                  0.22051687354645788
+                ],
+                [
+                  0.33897027373313904,
+                  0.33897027373313904,
+                  0.33897027373313904,
+                  0.8548453450202942,
+                  -1.7830888032913208,
+                  -0.5158752799034119,
+                  -0.5158752799034119,
+                  10.426202774047852,
+                  -1.8959881067276,
+                  -2.002336263656616,
+                  -1.974340796470642,
+                  -1.9156049489974976,
+                  -0.03859854117035866,
+                  -0.03859854117035866,
+                  -0.03828603774309158,
+                  -0.03828603774309158,
+                  -0.06776464730501175,
+                  -0.06694211810827255,
+                  0.06386084115644684
+                ],
+                [
+                  0.3370141386985779,
+                  0.3370141386985779,
+                  0.3370141386985779,
+                  0.8693945407867432,
+                  -1.8834447860717773,
+                  -0.5323808193206787,
+                  -0.5323808193206787,
+                  -1.7588565349578857,
+                  10.39855670928955,
+                  -1.9045804738998413,
+                  -2.009608507156372,
+                  -1.9726696014404297,
+                  -0.043478596955537796,
+                  -0.043478596955537796,
+                  -0.042884811758995056,
+                  -0.042884811758995056,
+                  -0.07051299512386322,
+                  -0.06937868148088455,
+                  0.056213154517464885
+                ],
+                [
+                  0.3366110324859619,
+                  0.3366110324859619,
+                  0.3366110324859619,
+                  0.8960533738136292,
+                  -1.9513781070709229,
+                  -0.5594422817230225,
+                  -0.5594422817230225,
+                  -1.874448299407959,
+                  -1.7766915559768677,
+                  10.39335823059082,
+                  -1.9041205644607544,
+                  -1.9906680583953857,
+                  -0.05775751173496246,
+                  -0.05775751173496246,
+                  -0.056303542107343674,
+                  -0.056303542107343674,
+                  -0.0781463012099266,
+                  -0.07597766071557999,
+                  0.03500732174809946
+                ],
+                [
+                  0.32189592719078064,
+                  0.32189592719078064,
+                  0.32189592719078064,
+                  0.9709420800209045,
+                  -2.0355029106140137,
+                  -0.6490463018417358,
+                  -0.6490463018417358,
+                  -1.9196968078613281,
+                  -1.8595787286758423,
+                  -1.7559115886688232,
+                  10.417695045471191,
+                  -1.876060962677002,
+                  -0.08461803942918777,
+                  -0.08461803942918777,
+                  -0.08146856725215912,
+                  -0.08146856725215912,
+                  -0.10033845156431198,
+                  -0.09648289531469345,
+                  -0.019809882000840235
+                ],
+                [
+                  0.2958959937095642,
+                  0.2958959937095642,
+                  0.2958959937095642,
+                  1.0589044094085693,
+                  -2.0877227783203125,
+                  -0.7630079388618469,
+                  -0.7630079388618469,
+                  -1.9361258745193481,
+                  -1.8698532581329346,
+                  -1.8123061656951904,
+                  -1.705206036567688,
+                  10.470118522644043,
+                  -0.10876309126615524,
+                  -0.10876309126615524,
+                  -0.10479515045881271,
+                  -0.10479515045881271,
+                  -0.12418285012245178,
+                  -0.11893372237682343,
+                  -0.07849567514037273
+                ],
+                [
+                  -1.2838791608810425,
+                  -1.2838791608810425,
+                  -1.2838791608810425,
+                  -0.8400537967681885,
+                  -0.3513268828392029,
+                  -0.44382575154304504,
+                  -0.44382575154304504,
+                  -0.1891113519668579,
+                  -0.12150929868221283,
+                  -0.07638825476169586,
+                  -0.05443359911441803,
+                  -0.04728449881076813,
+                  3.880554437637329,
+                  3.880554437637329,
+                  3.8811042308807373,
+                  3.8811042308807373,
+                  7.557305812835693,
+                  -4.5502705574035645,
+                  4.7395768278078645
+                ],
+                [
+                  -0.638297438621521,
+                  -0.638297438621521,
+                  -0.638297438621521,
+                  -0.4132187068462372,
+                  -0.15041710436344147,
+                  -0.22507885098457336,
+                  -0.22507885098457336,
+                  -0.08482587337493896,
+                  -0.05934993922710419,
+                  -0.04438961297273636,
+                  -0.03836721554398537,
+                  -0.035868894308805466,
+                  -1.1719807386398315,
+                  -1.1719807386398315,
+                  -1.1698750257492065,
+                  -1.1698750257492065,
+                  -2.1655478477478027,
+                  9.868292808532715,
+                  2.3662945792021732
+                ]
+              ],
+              "perceptronSettings": {
+                "locale": "pt",
+                "tag": "nlu-pt",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              }
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "pt",
+        "Me fale sobre o Marcal."
+      ],
+      [
+        "pt",
+        "Me fale sobre a Samantha"
+      ],
+      [
+        "pt",
+        "Me fale sobre o Ricardo"
+      ],
+      [
+        "pt",
+        "Me fale sobre o Raphael"
+      ],
+      [
+        "pt",
+        "Me fale sobre o Vinicius"
+      ],
+      [
+        "pt",
+        "Me fale sobre o Chapolin"
+      ],
+      [
+        "pt",
+        "Me fale sobre o Bolsonaro"
+      ],
+      [
+        "pt",
+        "Preciso ir"
+      ],
+      [
+        "pt",
+        "Até mais"
+      ],
+      [
+        "pt",
+        "Obrigado"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "pt": {
+        "greetings.gerente": [
+          {
+            "answer": "Gerente do time de sistemas e tecnologia da empresa Vermont Call Center"
+          }
+        ],
+        "greetings.gerente1": [
+          {
+            "answer": "Gerente do time de operações Big da empresa Vermont Call Center"
+          }
+        ],
+        "greetings.gerente2": [
+          {
+            "answer": "Gerente do time de operações Ontex da empresa Vermont Call Center"
+          }
+        ],
+        "greetings.programador": [
+          {
+            "answer": "Programador na Vermont Call Center"
+          }
+        ],
+        "greetings.programador2": [
+          {
+            "answer": "Programador/Analista na Vermont Call Center"
+          }
+        ],
+        "greetings.Chapolin": [
+          {
+            "answer": "Personagem estrelado por Roberto Gómez Bolaños, a série parodiava os super-heróis estadunidenses, e fazia constantemente críticas sociais em relação à América Latina."
+          }
+        ],
+        "greetings.Bolsonaro": [
+          {
+            "answer": "Jair Messias Bolsonaro Presidente da republica, eleito em 2019"
+          }
+        ],
+        "greetings.adeus": [
+          {
+            "answer": "Espero ter ajudado, Até mais!"
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}
